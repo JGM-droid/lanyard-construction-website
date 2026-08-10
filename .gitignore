@@ -1,0 +1,7 @@
+active_editor_state.json
+node_modules/
+dist/
+build/
+.env
+.env.local
+*.log
