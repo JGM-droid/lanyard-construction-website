@@ -1,17 +1,39 @@
+import Link from 'next/link';
 import { PageContainer } from '@/components/page-container';
-import { SectionWrapper } from '@/components/section-wrapper';
-import { PlaceholderContent } from '@/components/placeholder-content';
 
 export default function ContactPage() {
   return (
     <PageContainer>
-      <SectionWrapper>
-        <PlaceholderContent
-          title="Contact"
-          eyebrow="Prototype mode"
-          notice="The contact page remains non-submitting in this foundation phase. It is intentionally limited to placeholder guidance and layout structure."
-        />
-      </SectionWrapper>
+      <section className="section-surface overflow-hidden bg-gradient-to-br from-brand-navy via-brand-navy to-brand-medium p-8 text-white sm:p-10 lg:p-12">
+        <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+          <div className="space-y-6">
+            <p className="eyebrow text-brand-blue">Contact</p>
+            <h1 className="max-w-2xl text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
+              Consultation requests stay prototype-safe while final contact details are confirmed.
+            </h1>
+            <p className="max-w-2xl text-base leading-8 text-white/80 sm:text-lg">
+              This page keeps the inquiry path clear and polished while contact methods, service-area language, and lead handling remain owner-confirmed placeholders.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/services" className="btn-primary">
+                Review Services
+              </Link>
+              <Link href="/projects" className="btn-secondary border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white">
+                View Projects
+              </Link>
+            </div>
+          </div>
+
+          <div className="rounded-[2rem] border border-white/15 bg-white/10 p-6 shadow-soft backdrop-blur">
+            <h2 className="text-xl font-semibold text-white">Prototype guidance</h2>
+            <ul className="mt-5 space-y-3 text-sm leading-7 text-white/80">
+              <li>• Form submission remains disabled during this prototype phase.</li>
+              <li>• Contact methods, phone, and email remain Placeholder or Open Question.</li>
+              <li>• Project-specific follow-up will be routed once final owner-confirmed details are available.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </PageContainer>
   );
 }

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
@@ -17,63 +18,67 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="border-b border-stone-200 bg-white/90 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-brand-navy/10 bg-white/95 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 sm:px-8 lg:px-10">
-        <Link href="/" className="text-lg font-semibold tracking-[0.2em] text-brand-charcoal uppercase">
-          Lanyard Construction
+        <Link href="/" className="flex items-center gap-3" aria-label="Lanyard Construction Services home">
+          <div className="flex h-12 w-12 items-center justify-center rounded-full border border-brand-blue/20 bg-brand-cream/80 p-2 shadow-sm">
+            <Image src="/images/brand/lanyard-logo.png" alt="" width={72} height={72} className="h-full w-full object-contain" />
+          </div>
+          <div className="leading-none">
+            <p className="text-sm font-semibold uppercase tracking-[0.26em] text-brand-navy">Lanyard</p>
+            <p className="mt-1 text-[0.7rem] font-medium uppercase tracking-[0.23em] text-brand-charcoal/80">
+              Construction Services
+            </p>
+          </div>
         </Link>
-        <nav className="hidden items-center gap-6 md:flex">
+
+        <nav className="hidden items-center gap-6 lg:flex" aria-label="Primary navigation">
           {navItems.map((item) => {
             const isActive = pathname === item.href;
             return (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`text-sm font-medium transition ${isActive ? 'text-brand-accent' : 'text-stone-700 hover:text-brand-accent'}`}
+                className={`text-sm font-semibold transition ${isActive ? 'text-brand-blue' : 'text-brand-charcoal hover:text-brand-blue'}`}
               >
                 {item.label}
               </Link>
             );
           })}
-          <Link
-            href="/contact"
-            className="rounded-full bg-brand-accent px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#a8541f]"
-          >
-            Request a consultation
+          <Link href="/contact" className="btn-primary px-4 py-2 text-sm">
+            Consult with us
           </Link>
         </nav>
+
         <button
           type="button"
-          className="rounded-full border border-stone-300 px-3 py-2 text-sm font-medium text-brand-charcoal md:hidden"
+          className="rounded-full border border-brand-navy/15 bg-white px-3.5 py-2 text-sm font-semibold text-brand-navy lg:hidden"
           onClick={() => setOpen((prev) => !prev)}
           aria-expanded={open}
           aria-controls="mobile-nav"
         >
-          Menu
+          {open ? 'Close' : 'Menu'}
         </button>
       </div>
+
       {open ? (
-        <div id="mobile-nav" className="border-t border-stone-200 bg-white px-6 py-4 md:hidden">
-          <div className="flex flex-col gap-3">
+        <div id="mobile-nav" className="border-t border-brand-navy/10 bg-white px-6 py-4 lg:hidden">
+          <div className="flex flex-col gap-2">
             {navItems.map((item) => {
               const isActive = pathname === item.href;
               return (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`rounded-lg px-3 py-2 text-sm font-medium ${isActive ? 'bg-brand-cream text-brand-accent' : 'text-stone-700'}`}
+                  className={`rounded-2xl px-3 py-2 text-sm font-semibold ${isActive ? 'bg-brand-cream text-brand-blue' : 'text-brand-charcoal hover:bg-brand-cream'}`}
                   onClick={() => setOpen(false)}
                 >
                   {item.label}
                 </Link>
               );
             })}
-            <Link
-              href="/contact"
-              className="rounded-full bg-brand-accent px-4 py-2 text-center text-sm font-semibold text-white"
-              onClick={() => setOpen(false)}
-            >
-              Request a consultation
+            <Link href="/contact" className="btn-primary mt-2 justify-center py-2.5" onClick={() => setOpen(false)}>
+              Consult with us
             </Link>
           </div>
         </div>

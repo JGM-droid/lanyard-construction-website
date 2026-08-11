@@ -6,12 +6,12 @@ const heroSnapshots = [
   {
     src: '/images/home/hero-primary.svg',
     alt: 'Placeholder hero image showing an abstract construction facade and site pattern',
-    caption: 'Placeholder hero image',
+    caption: 'Placeholder visual direction for a future project-led hero',
   },
   {
     src: '/images/home/hero-secondary.svg',
-    alt: 'Placeholder hero image showing a stepped building study with warm accent lines',
-    caption: 'Placeholder visual study',
+    alt: 'Placeholder hero image showing a stepped building study with blue accent lines',
+    caption: 'Placeholder study for editorial composition',
   },
   {
     src: '/images/home/trust-placeholder.svg',
@@ -64,7 +64,7 @@ function PlaceholderPill({ children, dark = false }: { children: ReactNode; dark
   return (
     <span
       className={`inline-flex items-center rounded-full border px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.28em] ${
-        dark ? 'border-white/15 bg-white/10 text-white/80' : 'border-stone-300 bg-white text-brand-charcoal'
+        dark ? 'border-white/15 bg-white/10 text-white/80' : 'border-brand-blue/20 bg-brand-cream/70 text-brand-navy'
       }`}
     >
       {children}
@@ -87,32 +87,18 @@ function SectionHeading({
     <div className="max-w-3xl space-y-4">
       <PlaceholderPill dark={dark}>{eyebrow}</PlaceholderPill>
       <div className="space-y-4">
-        <h2 className={`text-3xl font-semibold tracking-tight sm:text-4xl ${dark ? 'text-white' : 'text-brand-charcoal'}`}>
+        <h2 className={`text-3xl font-semibold tracking-tight sm:text-4xl ${dark ? 'text-white' : 'text-brand-ink'}`}>
           {title}
         </h2>
-        <p className={`text-base leading-8 sm:text-lg ${dark ? 'text-white/72' : 'text-stone-600'}`}>{description}</p>
+        <p className={`text-base leading-8 sm:text-lg ${dark ? 'text-white/72' : 'text-brand-charcoal/80'}`}>{description}</p>
       </div>
     </div>
   );
 }
 
-function ContentCard({
-  title,
-  description,
-  dark = false,
-  image,
-}: {
-  title: string;
-  description: string;
-  dark?: boolean;
-  image?: string;
-}) {
+function ContentCard({ title, description, image }: { title: string; description: string; image?: string }) {
   return (
-    <article
-      className={`overflow-hidden rounded-[1.75rem] border shadow-soft transition duration-300 hover:-translate-y-1 ${
-        dark ? 'border-white/10 bg-white/5' : 'border-stone-200 bg-white'
-      }`}
-    >
+    <article className="content-card flex h-full flex-col">
       {image ? (
         <Image
           src={image}
@@ -123,23 +109,17 @@ function ContentCard({
           className="aspect-[4/3] w-full object-cover"
         />
       ) : null}
-      <div className="space-y-3 p-6 sm:p-7">
-        <h3 className={`text-xl font-semibold ${dark ? 'text-white' : 'text-brand-charcoal'}`}>{title}</h3>
-        <p className={`text-sm leading-7 ${dark ? 'text-white/72' : 'text-stone-600'}`}>{description}</p>
+      <div className="flex flex-1 flex-col gap-3 p-6 sm:p-7">
+        <h3 className="text-xl font-semibold text-brand-ink">{title}</h3>
+        <p className="text-sm leading-7 text-brand-charcoal/80">{description}</p>
       </div>
     </article>
   );
 }
 
-function HomeSection({
-  children,
-  dark = false,
-}: {
-  children: ReactNode;
-  dark?: boolean;
-}) {
+function HomeSection({ children, dark = false }: { children: ReactNode; dark?: boolean }) {
   return (
-    <section className={dark ? 'bg-brand-navy text-white' : 'bg-brand-cream text-brand-charcoal'}>
+    <section className={dark ? 'bg-brand-navy text-white' : 'bg-white text-brand-charcoal'}>
       <div className="mx-auto max-w-7xl px-6 py-16 sm:px-8 lg:px-10 lg:py-20">{children}</div>
     </section>
   );
@@ -148,62 +128,49 @@ function HomeSection({
 export function HomePage() {
   return (
     <div className="space-y-0">
-      <section className="relative overflow-hidden bg-brand-cream">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(198,111,45,0.14),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(15,23,42,0.09),transparent_25%)]" />
+      <section className="relative overflow-hidden bg-brand-cream/70">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(99,167,222,0.18),transparent_32%),radial-gradient(circle_at_bottom_right,rgba(41,45,120,0.1),transparent_24%)]" />
         <div className="relative mx-auto max-w-7xl px-6 pb-16 pt-10 sm:px-8 sm:pb-20 lg:px-10 lg:pb-24 lg:pt-14">
-          <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
+          <div className="grid items-center gap-14 lg:grid-cols-[1.02fr_0.98fr]">
             <div className="space-y-8">
-              <PlaceholderPill>Placeholder hero</PlaceholderPill>
+              <PlaceholderPill>Placeholder Hero</PlaceholderPill>
               <div className="space-y-5">
-                <h1 className="max-w-3xl text-5xl font-semibold tracking-tight text-brand-charcoal sm:text-6xl lg:text-7xl">
-                  Placeholder headline: built for the realities of occupied properties.
+                <h1 className="max-w-3xl text-5xl font-semibold tracking-tight text-brand-ink sm:text-6xl lg:text-7xl">
+                  A refined construction presence for occupied, high-visibility properties.
                 </h1>
-                <p className="max-w-2xl text-lg leading-8 text-stone-600 sm:text-xl">
-                  Placeholder copy: this homepage is structured to present Lanyard Construction Services as a professional
-                  commercial and multifamily renovation partner. Replace every marked claim, project detail, and image
-                  with client-approved content before launch.
+                <p className="max-w-2xl text-lg leading-8 text-brand-charcoal/80 sm:text-xl">
+                  This homepage direction translates Lanyard’s current identity into a more editorial, image-led presentation while keeping every factual claim clearly marked until the client confirms it.
                 </p>
               </div>
               <div className="flex flex-wrap gap-4">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center rounded-full bg-brand-accent px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-[#a8541f] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent focus-visible:ring-offset-2 focus-visible:ring-offset-brand-cream"
-                >
+                <Link href="/contact" className="btn-primary">
                   Request a Consultation
                 </Link>
-                <Link
-                  href="/services/exterior-renovations"
-                  className="inline-flex items-center justify-center rounded-full border border-stone-300 bg-white/70 px-6 py-3.5 text-sm font-semibold text-brand-charcoal transition hover:border-brand-accent hover:text-brand-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent focus-visible:ring-offset-2 focus-visible:ring-offset-brand-cream"
-                >
+                <Link href="/services/exterior-renovations" className="btn-secondary">
                   Explore Exterior Renovations
                 </Link>
               </div>
               <div className="grid gap-4 sm:grid-cols-3">
-                <div className="rounded-2xl border border-stone-200 bg-white/75 p-4 shadow-soft">
-                  <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-brand-accent">Placeholder</p>
-                  <p className="mt-2 text-sm leading-6 text-stone-600">Image-led hero layout with verified copy still pending.</p>
+                <div className="rounded-2xl border border-brand-navy/10 bg-white/80 p-4 shadow-sm">
+                  <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-brand-blue">Placeholder</p>
+                  <p className="mt-2 text-sm leading-6 text-brand-charcoal/80">Image-led hero layout with verified copy still pending.</p>
                 </div>
-                <div className="rounded-2xl border border-stone-200 bg-white/75 p-4 shadow-soft">
-                  <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-brand-accent">Placeholder</p>
-                  <p className="mt-2 text-sm leading-6 text-stone-600">Consultation CTA stays prominent at the first scroll.</p>
+                <div className="rounded-2xl border border-brand-navy/10 bg-white/80 p-4 shadow-sm">
+                  <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-brand-blue">Placeholder</p>
+                  <p className="mt-2 text-sm leading-6 text-brand-charcoal/80">Consultation CTA stays prominent at the first scroll.</p>
                 </div>
-                <div className="rounded-2xl border border-stone-200 bg-white/75 p-4 shadow-soft">
-                  <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-brand-accent">Placeholder</p>
-                  <p className="mt-2 text-sm leading-6 text-stone-600">All project references remain visibly unverified.</p>
+                <div className="rounded-2xl border border-brand-navy/10 bg-white/80 p-4 shadow-sm">
+                  <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-brand-blue">Placeholder</p>
+                  <p className="mt-2 text-sm leading-6 text-brand-charcoal/80">All project references remain visibly unverified.</p>
                 </div>
               </div>
             </div>
 
             <div className="relative">
-              <div className="absolute -left-8 top-6 h-40 w-40 rounded-full bg-brand-accent/15 blur-3xl" aria-hidden="true" />
+              <div className="absolute -left-8 top-6 h-40 w-40 rounded-full bg-brand-blue/15 blur-3xl" aria-hidden="true" />
               <div className="grid gap-4 sm:grid-cols-2">
                 {heroSnapshots.map((snapshot, index) => (
-                  <figure
-                    key={snapshot.src}
-                    className={`overflow-hidden rounded-[2rem] border border-stone-200 bg-white shadow-soft ${
-                      index === 0 ? 'sm:col-span-2' : ''
-                    }`}
-                  >
+                  <figure key={snapshot.src} className={`image-panel ${index === 0 ? 'sm:col-span-2' : ''}`}>
                     <Image
                       src={snapshot.src}
                       alt={snapshot.alt}
@@ -213,7 +180,7 @@ export function HomePage() {
                       sizes={index === 0 ? '(max-width: 1024px) 100vw, 52vw' : '(max-width: 768px) 100vw, 26vw'}
                       className="aspect-[16/10] w-full object-cover"
                     />
-                    <figcaption className="border-t border-stone-200 px-5 py-4 text-sm text-stone-600">
+                    <figcaption className="border-t border-brand-navy/10 bg-white px-5 py-4 text-sm text-brand-charcoal/70">
                       {snapshot.caption}
                     </figcaption>
                   </figure>
@@ -235,8 +202,8 @@ export function HomePage() {
 
           <div className="grid gap-4 sm:grid-cols-2">
             {trustPrinciples.map((principle) => (
-              <div key={principle} className="rounded-[1.5rem] border border-white/10 bg-white/5 p-6 backdrop-blur">
-                <p className="text-sm leading-7 text-white/82">{principle}</p>
+              <div key={principle} className="rounded-[1.5rem] border border-white/10 bg-white/10 p-6 backdrop-blur">
+                <p className="text-sm leading-7 text-white/80">{principle}</p>
               </div>
             ))}
           </div>
@@ -291,11 +258,11 @@ export function HomePage() {
 
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-6">
-                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-brand-accent">Placeholder</p>
+                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-brand-blue">Placeholder</p>
                 <p className="mt-3 text-sm leading-7 text-white/75">No invented statistics, award counts, or certifications are shown here.</p>
               </div>
               <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-6">
-                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-brand-accent">Placeholder</p>
+                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-brand-blue">Placeholder</p>
                 <p className="mt-3 text-sm leading-7 text-white/75">Copy remains open for proof-backed language once the client confirms it.</p>
               </div>
             </div>
@@ -321,9 +288,8 @@ export function HomePage() {
           ))}
         </div>
 
-        <div className="mt-6 rounded-[1.5rem] border border-dashed border-stone-300 bg-white/70 p-5 text-sm leading-7 text-stone-600">
-          Placeholder note: no project metrics, client names, or before-and-after claims are published until approved material
-          is supplied.
+        <div className="mt-6 rounded-[1.5rem] border border-dashed border-brand-navy/15 bg-brand-cream/70 p-5 text-sm leading-7 text-brand-charcoal/80">
+          Placeholder note: no project metrics, client names, or before-and-after claims are published until approved material is supplied.
         </div>
       </HomeSection>
 
@@ -339,16 +305,10 @@ export function HomePage() {
               </p>
             </div>
             <div className="mt-8 flex flex-wrap gap-4 lg:mt-0 lg:shrink-0">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-full bg-brand-accent px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-[#a8541f] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent focus-visible:ring-offset-2 focus-visible:ring-offset-brand-navy"
-              >
+              <Link href="/contact" className="btn-primary">
                 Request a Consultation
               </Link>
-              <Link
-                href="/projects"
-                className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3.5 text-sm font-semibold text-white transition hover:border-white hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-navy"
-              >
+              <Link href="/projects" className="btn-secondary border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white">
                 Review Projects
               </Link>
             </div>

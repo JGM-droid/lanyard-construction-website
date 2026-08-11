@@ -6,14 +6,21 @@ export default {
     extend: {
       colors: {
         brand: {
-          navy: '#0f172a',
-          charcoal: '#111827',
-          accent: '#c66f2d',
-          cream: '#f7f4ee',
+          blue: '#63A7DE',
+          medium: '#5289C7',
+          navy: '#292D78',
+          charcoal: '#4E4E50',
+          silver: '#919395',
+          cream: '#F5F7FA',
+          accent: '#63A7DE',
+          ink: '#161B2F',
         },
       },
       boxShadow: {
-        soft: '0 18px 45px -24px rgba(15, 23, 42, 0.35)',
+        soft: '0 24px 60px -30px rgba(41, 45, 120, 0.35)',
+      },
+      fontFamily: {
+        sans: ['Inter', 'Segoe UI', 'Arial', 'sans-serif'],
       },
     },
   },
