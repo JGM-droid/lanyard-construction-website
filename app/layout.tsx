@@ -9,8 +9,8 @@ export const metadata: Metadata = {
     template: '%s | Lanyard Construction Services',
   },
   description:
-    'Placeholder-safe foundation for a construction services website prototype with shared navigation and route shells.',
-  keywords: ['construction', 'commercial renovation', 'multifamily', 'prototype'],
+    'Lanyard Construction Services offers multifamily renovation and general contracting services with a clear, simple website experience for owners and managers.',
+  keywords: ['construction', 'multifamily renovation', 'general contracting', 'commercial renovation'],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

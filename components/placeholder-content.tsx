@@ -23,17 +23,17 @@ export function PlaceholderContent({
           href="/contact"
           className="rounded-full bg-brand-navy px-5 py-3 text-sm font-semibold text-white transition hover:bg-brand-medium"
         >
-          Request a consultation
+          Contact Us
         </Link>
         <Link
           href="/services"
           className="rounded-full border border-stone-300 px-5 py-3 text-sm font-semibold text-brand-charcoal transition hover:border-brand-blue hover:text-brand-blue"
         >
-          Explore services
+          View Services
         </Link>
       </div>
       <div className="rounded-2xl border border-dashed border-stone-300 bg-brand-cream/70 p-4 text-sm text-stone-600">
-        Placeholder content remains visible so future feature agents can replace it without confusing it with approved facts.
+        This section is ready for approved content.
       </div>
     </div>
   );

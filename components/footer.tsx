@@ -3,10 +3,17 @@ import Link from 'next/link';
 
 const footerLinks = [
   { href: '/', label: 'Home' },
-  { href: '/services', label: 'Services' },
-  { href: '/projects', label: 'Projects' },
   { href: '/about', label: 'About' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/services', label: 'Services' },
+  { href: '/projects', label: 'Completed Projects' },
+  { href: '/contact', label: 'Contact Us' },
+];
+
+const serviceLinks = [
+  { href: '/services/exterior-renovations', label: 'Exterior Renovations' },
+  { href: '/services', label: 'Interior Renovations' },
+  { href: '/services', label: 'Fire & Flood Restoration' },
+  { href: '/services', label: 'Maintenance Services' },
 ];
 
 export function Footer() {
@@ -26,8 +33,13 @@ export function Footer() {
             </div>
           </Link>
           <p className="text-sm leading-7 text-white/75">
-            Placeholder-safe website direction for a polished commercial and multifamily renovation presence. Contact details and project proof remain owner-confirmed pending final approval.
+            Lanyard Construction Services provides multifamily renovation, restoration, and capital improvement support with a practical and dependable approach.
           </p>
+          <div className="rounded-2xl border border-white/10 bg-white/10 p-4 text-sm leading-7 text-white/75">
+            <p className="font-semibold text-white">Official-site details reviewed</p>
+            <p className="mt-2">Phone: (469) 543-1001</p>
+            <p>Address: 208 Industrial Ct., Wylie, TX 75098</p>
+          </div>
         </div>
 
         <div className="grid gap-8 sm:grid-cols-2 lg:min-w-[24rem] lg:grid-cols-2">
@@ -42,10 +54,14 @@ export function Footer() {
             </div>
           </div>
           <div className="space-y-3">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-brand-blue">Owner confirmation</p>
-            <p className="text-sm leading-7 text-white/75">
-              Contact details, service-area language, and project evidence are still Placeholder or Open Question pending owner confirmation.
-            </p>
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-brand-blue">Primary services</p>
+            <div className="flex flex-col gap-2 text-sm text-white/75">
+              {serviceLinks.map((item) => (
+                <Link key={item.href} href={item.href} className="transition hover:text-white">
+                  {item.label}
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </div>

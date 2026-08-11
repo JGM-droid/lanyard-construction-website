@@ -134,3 +134,27 @@ A content item can move from Placeholder to Confirmed only when all relevant evi
 - Certification evidence: issuing body, credential ID, and validity status.
 - Project evidence: publishable images plus approved project summary.
 - Statistical evidence: metric definition, date range, and source ownership.
+
+## 9. Content Readiness Inventory for Launch
+### Verified from the official website reference
+- Confirmed source reference: https://lanyardcs.com/
+- Confirmed phone number: (469) 543-1001
+- Confirmed address: 208 Industrial Ct., Wylie, TX 75098
+- Confirmed business focus: Multifamily general contractor / multifamily renovation focus
+- Confirmed service categories: Exterior Renovations, Interior Renovations, Fire/Flood Restoration, Maintenance Services
+
+### Owner-dependent items still required before public launch
+- Final project video or hosting URL
+- Poster image for the project-video section
+- Verified project photography and usage rights
+- Project names and descriptions
+- Google Business Profile URL
+- Direct "Leave a review" URL
+- Approved reviews
+- Permission to reproduce review text and reviewer display names
+- Confirmed rating and review count at launch
+- Team information and bios
+- Preferred email/contact destination
+- Final confirmation of phone and address
+- Social-media URLs
+- Privacy policy and form-handling requirements

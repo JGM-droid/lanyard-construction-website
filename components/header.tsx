@@ -7,10 +7,10 @@ import { useState } from 'react';
 
 const navItems = [
   { href: '/', label: 'Home' },
-  { href: '/services', label: 'Services' },
-  { href: '/projects', label: 'Projects' },
   { href: '/about', label: 'About' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/services', label: 'Services' },
+  { href: '/projects', label: 'Completed Projects' },
+  { href: '/contact', label: 'Contact Us' },
 ];
 
 export function Header() {
@@ -32,22 +32,20 @@ export function Header() {
           </div>
         </Link>
 
-        <nav className="hidden items-center gap-6 lg:flex" aria-label="Primary navigation">
+        <nav className="hidden items-center gap-5 lg:flex" aria-label="Primary navigation">
           {navItems.map((item) => {
             const isActive = pathname === item.href;
+            const isContact = item.href === '/contact';
             return (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`text-sm font-semibold transition ${isActive ? 'text-brand-blue' : 'text-brand-charcoal hover:text-brand-blue'}`}
+                className={`text-sm font-semibold transition ${isContact ? 'btn-primary px-4 py-2 text-sm' : isActive ? 'text-brand-blue' : 'text-brand-charcoal hover:text-brand-blue'}`}
               >
                 {item.label}
               </Link>
             );
           })}
-          <Link href="/contact" className="btn-primary px-4 py-2 text-sm">
-            Consult with us
-          </Link>
         </nav>
 
         <button
@@ -66,20 +64,18 @@ export function Header() {
           <div className="flex flex-col gap-2">
             {navItems.map((item) => {
               const isActive = pathname === item.href;
+              const isContact = item.href === '/contact';
               return (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`rounded-2xl px-3 py-2 text-sm font-semibold ${isActive ? 'bg-brand-cream text-brand-blue' : 'text-brand-charcoal hover:bg-brand-cream'}`}
+                  className={`rounded-2xl px-3 py-2 text-sm font-semibold ${isContact ? 'btn-primary mt-1 justify-center py-2.5' : isActive ? 'bg-brand-cream text-brand-blue' : 'text-brand-charcoal hover:bg-brand-cream'}`}
                   onClick={() => setOpen(false)}
                 >
                   {item.label}
                 </Link>
               );
             })}
-            <Link href="/contact" className="btn-primary mt-2 justify-center py-2.5" onClick={() => setOpen(false)}>
-              Consult with us
-            </Link>
           </div>
         </div>
       ) : null}

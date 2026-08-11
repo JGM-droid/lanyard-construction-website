@@ -13,116 +13,89 @@ export default function ExteriorRenovationsPage() {
       <main className="flex flex-col gap-8 sm:gap-10 lg:gap-12" aria-labelledby="exterior-renovations-title">
         <ServicesHero
           headingId="exterior-renovations-title"
-          title="Exterior Renovations for Commercial and Multifamily Properties"
-          subtitle="This detail page demonstrates a focused renovation narrative with clear status labeling. Scope descriptions, image context, and performance language remain placeholder-safe until client confirmation."
+          title="Exterior Renovations"
+          subtitle="Lanyard Construction Services provides exterior renovation work for multifamily and other properties."
           imageSrc="/images/services/exterior-hero.svg"
-          imageAlt="Placeholder exterior renovation visual concept panel"
+          imageAlt="Service image needed: Add an approved photograph showing exterior renovation work."
           ctaHref="/contact"
-          ctaLabel="Request Exterior Consultation"
+          ctaLabel="Contact Lanyard"
         />
 
         <ServiceCategoryGrid
-          title="Renovation categories are structured for clear decision-making"
-          intro="Category structure supports discovery conversations without asserting unverified methods, outcomes, or material specifications."
+          title="Services"
+          intro="These categories are a simple list of the work we offer."
           items={[
             {
-              title: 'Facade Renewal Scope',
-              description:
-                'Placeholder category for visible facade updates and modernization work. Detailed assemblies and system limits remain unverified.',
+              title: 'Exterior renovation work',
+              description: 'Service photo needed. Add a photo showing this type of work.',
               status: 'Placeholder',
             },
             {
-              title: 'Weather-Exposure Repair Paths',
-              description:
-                'Assumed category for addressing weather-facing exterior components. Inspection protocol and repair thresholds are pending validation.',
-              status: 'Assumed',
-            },
-            {
-              title: 'Exterior Component Upgrades',
-              description:
-                'Placeholder grouping for replacement or enhancement of selected exterior elements. Product selections are not yet confirmed.',
+              title: 'Property coordination',
+              description: 'Service photo needed. Add a photo showing this type of work.',
               status: 'Placeholder',
             },
             {
-              title: 'Site Logistics During Active Occupancy',
-              description:
-                'Assumed support category for staging and communication while properties stay active. Sequencing model remains client-dependent.',
-              status: 'Assumed',
-            },
-            {
-              title: 'Finish and Appearance Refresh',
-              description:
-                'Open Question category for desired finish standards and visual targets across asset types.',
-              status: 'Open Question',
-            },
-            {
-              title: 'Closeout Documentation Set',
-              description:
-                'Placeholder category for turnover expectations, signoff criteria, and documentation package depth.',
+              title: 'Project scope planning',
+              description: 'Service photo needed. Add a photo showing this type of work.',
               status: 'Placeholder',
             },
           ]}
         />
 
         <ProcessOverview
-          title="Approach section for exterior renovation planning"
-          intro="The steps below describe an implementation approach framework only. Timeline lengths, technical sequencing, and success criteria are intentionally left as Placeholder or Assumed states."
+          title="How We Work"
+          intro="We review each project and talk through the next step."
           steps={[
             {
-              title: 'Exterior Condition Discovery',
-              description:
-                'Confirmed prototype step focused on understanding current exterior context before prescribing renovation pathways.',
+              title: 'Discuss the work',
+              description: 'We talk through the project and next step.',
               status: 'Confirmed',
             },
             {
-              title: 'Assumed Scope Option Mapping',
-              description:
-                'Assumed step for comparing renovation options with stakeholder priorities and operational constraints.',
-              status: 'Assumed',
-            },
-            {
-              title: 'Placeholder Sequence and Logistics',
-              description:
-                'Placeholder step covering task sequencing, staging zones, and communication checkpoints until specific standards are provided.',
+              title: 'Review the property',
+              description: 'We review the property and scope.',
               status: 'Placeholder',
             },
             {
-              title: 'Consultation and Next Decisions',
-              description:
-                'Confirmed conversion step that routes teams to consultation for verified project-specific recommendations.',
+              title: 'Confirm the next step',
+              description: 'We help plan the next step.',
+              status: 'Placeholder',
+            },
+            {
+              title: 'Contact Us',
+              description: 'Call us or visit our office.',
               status: 'Confirmed',
             },
           ]}
         />
 
         <ProjectPreviewSection
-          title="Project preview area with clearly marked placeholders"
-          intro="These previews provide layout direction only. Project names, timelines, methods, and outcomes below are placeholders and not representations of completed work."
+          title="Project Photos"
+          intro="Project details and photos will be added here."
           projects={[
             {
-              title: 'Placeholder Exterior Refresh Program',
-              subtitle:
-                'Placeholder visual card for a multi-building exterior refresh concept. Project proof, photography provenance, and measurable outcomes are unverified.',
+              title: 'Project Details Needed',
+              subtitle: 'Add the project name, location, work completed, and photos.',
               imageSrc: '/images/services/project-preview-a.svg',
-              imageAlt: 'Placeholder project preview graphic A for exterior renovations',
+              imageAlt: 'Project photo needed',
               status: 'Placeholder',
             },
             {
-              title: 'Assumed Occupied-Site Phasing Example',
-              subtitle:
-                'Assumed card illustrating phased exterior work while maintaining active operations. Final phasing model and communication protocol are pending confirmation.',
+              title: 'Project Details Needed',
+              subtitle: 'Add the project name, location, work completed, and photos.',
               imageSrc: '/images/services/project-preview-b.svg',
-              imageAlt: 'Placeholder project preview graphic B for exterior renovations',
-              status: 'Assumed',
+              imageAlt: 'Project photo needed',
+              status: 'Placeholder',
             },
           ]}
         />
 
         <ConsultationCta
-          title="Discuss exterior renovation priorities with a consultation-first workflow"
-          body="This prototype CTA is intentionally factual-safe: it invites project discussions without asserting unverified capabilities, statistics, certifications, guarantees, or results."
+          title="Contact Us"
+          body="Reach out for your next project."
           primaryHref="/contact"
-          primaryLabel="Request Exterior Consultation"
+          primaryLabel="Contact Lanyard"
         />
       </main>
     </PageContainer>

@@ -9,11 +9,17 @@ export default function ContactPage() {
           <div className="space-y-6">
             <p className="eyebrow text-brand-blue">Contact</p>
             <h1 className="max-w-2xl text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
-              Consultation requests stay prototype-safe while final contact details are confirmed.
+              Contact Lanyard
             </h1>
             <p className="max-w-2xl text-base leading-8 text-white/80 sm:text-lg">
-              This page keeps the inquiry path clear and polished while contact methods, service-area language, and lead handling remain owner-confirmed placeholders.
+              Reach out for your next renovation project. Call us or visit our office.
             </p>
+            <div className="rounded-2xl border border-white/10 bg-white/10 p-4 text-sm leading-7 text-white/80">
+              <p className="font-semibold text-white">Official-site details reviewed</p>
+              <p className="mt-2">Phone: (469) 543-1001</p>
+              <p>Address: 208 Industrial Ct., Wylie, TX 75098</p>
+              <p className="mt-2">Exterior Renovations • Interior Renovations • Fire and Flood Restoration • Maintenance Services</p>
+            </div>
             <div className="flex flex-wrap gap-3">
               <Link href="/services" className="btn-primary">
                 Review Services
@@ -25,11 +31,11 @@ export default function ContactPage() {
           </div>
 
           <div className="rounded-[2rem] border border-white/15 bg-white/10 p-6 shadow-soft backdrop-blur">
-            <h2 className="text-xl font-semibold text-white">Prototype guidance</h2>
+            <h2 className="text-xl font-semibold text-white">Contact Details</h2>
             <ul className="mt-5 space-y-3 text-sm leading-7 text-white/80">
-              <li>• Form submission remains disabled during this prototype phase.</li>
-              <li>• Contact methods, phone, and email remain Placeholder or Open Question.</li>
-              <li>• Project-specific follow-up will be routed once final owner-confirmed details are available.</li>
+              <li>• Phone: (469) 543-1001</li>
+              <li>• Address: 208 Industrial Ct., Wylie, TX 75098</li>
+              <li>• Services: Exterior Renovations, Interior Renovations, Fire and Flood Restoration, Maintenance Services</li>
             </ul>
           </div>
         </div>

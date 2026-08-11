@@ -5,18 +5,21 @@ import { ReactNode } from 'react';
 type StatusKind = 'Confirmed' | 'Assumed' | 'Placeholder' | 'Open Question';
 
 type ServiceItem = {
+  id?: string;
   title: string;
   description: string;
   status: StatusKind;
 };
 
 type ProcessStep = {
+  id?: string;
   title: string;
   description: string;
   status: StatusKind;
 };
 
 type ProjectPreview = {
+  id?: string;
   title: string;
   subtitle: string;
   imageSrc: string;
@@ -101,7 +104,7 @@ export function ServicesHero({
               {ctaLabel}
             </Link>
             <Link href="/contact" className="btn-secondary border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white">
-              Request Consultation
+              Contact Lanyard
             </Link>
           </div>
         </div>
@@ -116,7 +119,7 @@ export function ServicesHero({
             priority
           />
           <figcaption className="border-t border-stone-300/20 bg-brand-charcoal/90 px-4 py-3 text-xs leading-6 text-stone-300">
-            Placeholder image treatment for visual direction only. Image subject and project context remain unverified.
+            Image needed: add an approved photograph that shows the service area or completed work.
           </figcaption>
         </figure>
       </div>
@@ -145,7 +148,7 @@ export function ServiceCategoryGrid({
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {items.map((item) => (
             <article
-              key={item.title}
+              key={item.id ?? `${item.title}-${item.description}`}
               className="flex h-full flex-col gap-4 rounded-2xl border border-brand-navy/10 bg-brand-cream/60 p-6"
             >
               <StatusPill status={item.status} />
@@ -171,7 +174,7 @@ export function ProcessOverview({ title, intro, steps }: { title: string; intro:
 
         <ol className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {steps.map((step, index) => (
-            <li key={step.title} className="rounded-2xl border border-white/10 bg-white/10 p-5">
+            <li key={step.id ?? `${step.title}-${step.description}`} className="rounded-2xl border border-white/10 bg-white/10 p-5">
               <p className="text-xs font-semibold tracking-[0.2em] text-brand-blue uppercase">Step {index + 1}</p>
               <h3 className="mt-3 text-lg font-semibold text-white">{step.title}</h3>
               <p className="mt-3 text-sm leading-7 text-stone-200">{step.description}</p>
@@ -193,7 +196,7 @@ export function TrustSignalSection({
 }: {
   title: string;
   intro: string;
-  bullets: { label: string; description: string; status: StatusKind }[];
+  bullets: { id?: string; label: string; description: string; status: StatusKind }[];
 }) {
   return (
     <SectionBlock tone="light" id="trust-signals">
@@ -205,7 +208,7 @@ export function TrustSignalSection({
         </header>
         <div className="space-y-4">
           {bullets.map((bullet) => (
-            <article key={bullet.label} className="rounded-2xl border border-brand-navy/10 bg-brand-cream/70 p-5">
+            <article key={bullet.id ?? `${bullet.label}-${bullet.description}`} className="rounded-2xl border border-brand-navy/10 bg-brand-cream/70 p-5">
               <div className="mb-3">
                 <StatusPill status={bullet.status} />
               </div>
@@ -239,7 +242,7 @@ export function ProjectPreviewSection({
 
         <div className="grid gap-5 md:grid-cols-2">
           {projects.map((project) => (
-            <article key={project.title} className="content-card overflow-hidden">
+            <article key={project.id ?? `${project.title}-${project.subtitle}-${project.imageSrc}`} className="content-card overflow-hidden">
               <Image
                 src={project.imageSrc}
                 alt={project.imageAlt}
@@ -265,7 +268,7 @@ export function ConsultationCta({ title, body, primaryHref, primaryLabel }: { ti
     <SectionBlock tone="dark" id="consultation-cta">
       <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
         <div className="max-w-3xl space-y-3">
-          <p className="eyebrow">Consultation Path</p>
+          <p className="eyebrow">Contact</p>
           <h2 className="text-pretty text-2xl font-semibold leading-tight text-white sm:text-3xl">{title}</h2>
           <p className="text-base leading-8 text-stone-200">{body}</p>
         </div>
@@ -274,7 +277,7 @@ export function ConsultationCta({ title, body, primaryHref, primaryLabel }: { ti
             {primaryLabel}
           </Link>
           <Link href="/services" className="btn-secondary border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white">
-            Return to Services Hub
+            Our Services
           </Link>
         </div>
       </div>
