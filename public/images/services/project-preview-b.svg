@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 820" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder project preview graphic B</title>
+  <desc id="desc">Abstract phased construction composition used as placeholder artwork for project preview card.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f5f1e8"/>
+      <stop offset="1" stop-color="#ebe2cf"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="820" fill="url(#bg)"/>
+  <rect x="110" y="120" width="260" height="560" rx="22" fill="#111827" opacity="0.86"/>
+  <rect x="406" y="120" width="320" height="560" rx="22" fill="#1f2937" opacity="0.88"/>
+  <rect x="760" y="120" width="410" height="560" rx="22" fill="#334155" opacity="0.9"/>
+  <rect x="136" y="160" width="180" height="12" rx="6" fill="#f7f4ee" opacity="0.85"/>
+  <rect x="136" y="194" width="148" height="10" rx="5" fill="#f7f4ee" opacity="0.58"/>
+  <rect x="432" y="160" width="214" height="12" rx="6" fill="#f7f4ee" opacity="0.76"/>
+  <rect x="432" y="194" width="188" height="10" rx="5" fill="#f7f4ee" opacity="0.5"/>
+  <rect x="788" y="160" width="250" height="12" rx="6" fill="#f7f4ee" opacity="0.8"/>
+  <rect x="788" y="194" width="210" height="10" rx="5" fill="#f7f4ee" opacity="0.55"/>
+  <path d="M0 710 L260 560 L530 710 Z" fill="#c66f2d" opacity="0.7"/>
+  <path d="M420 710 L740 500 L1080 710 Z" fill="#c66f2d" opacity="0.54"/>
+</svg>
