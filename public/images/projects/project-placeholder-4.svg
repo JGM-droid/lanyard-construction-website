@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder Project Image 04</title>
+  <desc id="desc">Placeholder visual for project card 04.</desc>
+  <rect width="1200" height="900" fill="#3f2f25"/>
+  <polygon points="120,740 360,180 620,740" fill="#8f6848" opacity="0.55"/>
+  <polygon points="520,740 760,260 1020,740" fill="#b3875d" opacity="0.45"/>
+  <text x="130" y="150" font-family="Arial, Helvetica, sans-serif" font-size="50" fill="#ffe9ca">PLACEHOLDER 04</text>
+</svg>

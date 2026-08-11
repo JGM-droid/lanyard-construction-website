@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 750" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder Team Image 01</title>
+  <desc id="desc">Placeholder portrait visual 01.</desc>
+  <rect width="1000" height="750" fill="#3b2f2a"/>
+  <circle cx="500" cy="280" r="140" fill="#7f685b"/>
+  <rect x="280" y="450" width="440" height="180" rx="80" fill="#a78976"/>
+  <text x="120" y="700" font-family="Arial, Helvetica, sans-serif" font-size="44" fill="#f5e5d9">PLACEHOLDER TEAM 01</text>
+</svg>

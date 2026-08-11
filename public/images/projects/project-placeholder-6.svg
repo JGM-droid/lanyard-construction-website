@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder Project Image 06</title>
+  <desc id="desc">Placeholder visual for project card 06.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2f2f3f"/>
+      <stop offset="100%" stop-color="#4d4d63"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <g fill="#c8c2a7" opacity="0.4">
+    <ellipse cx="280" cy="600" rx="220" ry="130"/>
+    <ellipse cx="700" cy="500" rx="300" ry="170"/>
+    <ellipse cx="980" cy="680" rx="180" ry="120"/>
+  </g>
+  <text x="130" y="180" font-family="Arial, Helvetica, sans-serif" font-size="50" fill="#f4f1e1">PLACEHOLDER 06</text>
+</svg>

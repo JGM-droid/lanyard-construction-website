@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder Projects Hero</title>
+  <desc id="desc">Placeholder visual for projects hero section.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2b2119"/>
+      <stop offset="50%" stop-color="#4b3727"/>
+      <stop offset="100%" stop-color="#7c5b3f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#g)"/>
+  <g opacity="0.25" fill="#f0d8b8">
+    <rect x="120" y="140" width="460" height="260" rx="16"/>
+    <rect x="680" y="220" width="760" height="320" rx="20"/>
+    <rect x="220" y="520" width="590" height="290" rx="18"/>
+  </g>
+  <text x="100" y="900" font-family="Arial, Helvetica, sans-serif" font-size="56" fill="#fff2df" letter-spacing="4">
+    PLACEHOLDER PROJECT IMAGE
+  </text>
+</svg>
