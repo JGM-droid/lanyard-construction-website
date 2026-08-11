@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder Project Image 01</title>
+  <desc id="desc">Placeholder visual for project card 01.</desc>
+  <rect width="1200" height="900" fill="#463223"/>
+  <rect x="80" y="90" width="1040" height="720" rx="26" fill="#7d5b40" opacity="0.35"/>
+  <line x1="80" y1="540" x2="1120" y2="540" stroke="#fbe8cb" stroke-width="5" opacity="0.5"/>
+  <text x="110" y="160" font-family="Arial, Helvetica, sans-serif" font-size="50" fill="#fbe8cb">PLACEHOLDER 01</text>
+</svg>
