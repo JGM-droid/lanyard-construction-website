@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 900" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder exterior renovation composition</title>
+  <desc id="desc">Abstract facade-like geometry used as a legal-safe placeholder image for exterior renovation content.</desc>
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="trim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c66f2d"/>
+      <stop offset="1" stop-color="#f0b07a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="900" fill="url(#base)"/>
+  <rect x="88" y="96" width="1104" height="708" rx="34" fill="#f7f4ee" opacity="0.1"/>
+  <rect x="150" y="158" width="340" height="582" rx="20" fill="#1f2937"/>
+  <rect x="524" y="158" width="248" height="582" rx="20" fill="#374151"/>
+  <rect x="806" y="158" width="324" height="582" rx="20" fill="#1f2937"/>
+  <rect x="172" y="188" width="296" height="24" rx="12" fill="url(#trim)" opacity="0.9"/>
+  <rect x="172" y="232" width="220" height="10" rx="5" fill="#d1d5db" opacity="0.7"/>
+  <rect x="550" y="202" width="200" height="12" rx="6" fill="#e5e7eb" opacity="0.65"/>
+  <rect x="550" y="238" width="140" height="10" rx="5" fill="#e5e7eb" opacity="0.45"/>
+  <rect x="830" y="188" width="278" height="12" rx="6" fill="#d1d5db" opacity="0.72"/>
+  <rect x="830" y="224" width="228" height="10" rx="5" fill="#d1d5db" opacity="0.46"/>
+  <path d="M88 804 L384 620 L698 804 Z" fill="#9ca3af" opacity="0.3"/>
+  <path d="M512 804 L840 560 L1192 804 Z" fill="url(#trim)" opacity="0.4"/>
+</svg>
