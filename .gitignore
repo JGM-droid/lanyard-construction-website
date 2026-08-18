@@ -2,6 +2,7 @@ active_editor_state.json
 node_modules/
 dist/
 build/
+out/
 .env
 .env.local
 *.log
