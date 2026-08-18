@@ -4,63 +4,56 @@ import Link from 'next/link';
 const projectCategories = [
   {
     id: 'project-category-exterior',
-    title: 'Exterior Work',
-    summary: 'Add project details here.',
+    title: 'Exterior Renovations',
+    summary: 'Exterior renovation support for multifamily and other properties.',
   },
   {
-    id: 'project-category-multifamily',
-    title: 'Multifamily Work',
-    summary: 'Add project details here.',
+    id: 'project-category-interior',
+    title: 'Interior Renovations',
+    summary: 'Interior renovation support for units, common areas, and shared spaces.',
   },
   {
-    id: 'project-category-other',
-    title: 'Other Work',
-    summary: 'Add project details here.',
+    id: 'project-category-restoration',
+    title: 'Fire & Flood Restoration',
+    summary: 'Restoration support for properties affected by fire or flood damage.',
+  },
+  {
+    id: 'project-category-maintenance',
+    title: 'Maintenance Services',
+    summary: 'Maintenance support for ongoing property needs and planned repairs.',
   },
 ];
 
-const placeholderProjects = [
+const visualAssets = [
   {
-    id: 'project-placeholder-1',
-    title: 'Project Details Needed',
-    category: 'Exterior Work',
-    details: 'Add the project name, location, work completed, and photos.',
-    image: '/images/projects/project-placeholder-1.svg',
+    id: 'project-visual-1',
+    image: '/images/services/exterior-hero.svg',
+    alt: 'Construction service visual',
   },
   {
-    id: 'project-placeholder-2',
-    title: 'Project Details Needed',
-    category: 'Multifamily Work',
-    details: 'Add the project name, location, work completed, and photos.',
-    image: '/images/projects/project-placeholder-2.svg',
+    id: 'project-visual-2',
+    image: '/images/services/overview-hero.svg',
+    alt: 'Multifamily construction service visual',
   },
   {
-    id: 'project-placeholder-3',
-    title: 'Project Details Needed',
-    category: 'Other Work',
-    details: 'Add the project name, location, work completed, and photos.',
-    image: '/images/projects/project-placeholder-3.svg',
+    id: 'project-visual-3',
+    image: '/images/services/project-preview-a.svg',
+    alt: 'Renovation service visual',
   },
   {
-    id: 'project-placeholder-4',
-    title: 'Project Details Needed',
-    category: 'Exterior Work',
-    details: 'Add the project name, location, work completed, and photos.',
-    image: '/images/projects/project-placeholder-4.svg',
+    id: 'project-visual-4',
+    image: '/images/services/project-preview-b.svg',
+    alt: 'Restoration service visual',
   },
   {
-    id: 'project-placeholder-5',
-    title: 'Project Details Needed',
-    category: 'Multifamily Work',
-    details: 'Add the project name, location, work completed, and photos.',
-    image: '/images/projects/project-placeholder-5.svg',
+    id: 'project-visual-5',
+    image: '/images/home/service-highlight.svg',
+    alt: 'Capital improvement service visual',
   },
   {
-    id: 'project-placeholder-6',
-    title: 'Project Details Needed',
-    category: 'Other Work',
-    details: 'Add the project name, location, work completed, and photos.',
-    image: '/images/projects/project-placeholder-6.svg',
+    id: 'project-visual-6',
+    image: '/images/home/hero-secondary.svg',
+    alt: 'Maintenance service visual',
   },
 ];
 
@@ -70,7 +63,7 @@ export function ProjectsPageContent() {
       <section className="section-surface overflow-hidden bg-brand-navy text-white">
         <div className="grid lg:grid-cols-[1.2fr_0.8fr]">
           <div className="relative min-h-[20rem] lg:min-h-[26rem]">
-            <Image src="/images/projects/hero-placeholder.svg" alt="Placeholder image for approved projects hero visual." fill className="object-cover" priority />
+            <Image src="/images/services/exterior-hero.svg" alt="Construction service visual" fill className="object-cover" priority />
             <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/90 via-brand-navy/55 to-transparent" />
             <div className="relative z-10 flex h-full flex-col justify-end gap-4 p-6 sm:p-10">
               <p className="inline-flex w-fit rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-white/90">
@@ -80,15 +73,16 @@ export function ProjectsPageContent() {
                 Our Work
               </h1>
               <p className="max-w-2xl text-sm leading-relaxed text-white/80 sm:text-base">
-                Project details and photos will be added here.
+                Lanyard supports multifamily renovation, restoration, capital improvements, and maintenance needs with
+                a practical approach built around property operations.
               </p>
             </div>
           </div>
           <aside className="flex flex-col justify-between gap-6 border-t border-white/10 bg-brand-navy/95 p-6 sm:p-10 lg:border-l lg:border-t-0">
             <div className="space-y-4">
-              <h2 className="text-xl font-semibold text-white">Contact Us</h2>
+              <h2 className="text-xl font-semibold text-white">Discuss Your Property</h2>
               <p className="text-sm leading-relaxed text-white/80">
-                Reach out for your next project.
+                Contact Lanyard to talk through renovation, restoration, capital improvement, or maintenance needs.
               </p>
             </div>
             <div className="flex flex-wrap gap-3">
@@ -96,7 +90,7 @@ export function ProjectsPageContent() {
                 Contact Us
               </Link>
               <a href="#project-gallery" className="btn-secondary border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white">
-                View Project Gallery
+                View Work Areas
               </a>
             </div>
           </aside>
@@ -109,10 +103,10 @@ export function ProjectsPageContent() {
             Project Types
           </h2>
           <p className="max-w-3xl text-sm leading-relaxed text-brand-charcoal/80 sm:text-base">
-            Project types will be added here.
+            These categories reflect the approved services currently presented for Lanyard Construction Services.
           </p>
         </div>
-        <ul className="grid gap-4 md:grid-cols-3">
+        <ul className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {projectCategories.map((category) => (
             <li key={category.id} className="rounded-2xl border border-brand-navy/10 bg-white/95 p-5 shadow-soft">
               <h3 className="text-lg font-semibold text-brand-ink">{category.title}</h3>
@@ -125,25 +119,18 @@ export function ProjectsPageContent() {
       <section id="project-gallery" aria-labelledby="project-gallery-heading" className="space-y-6">
         <div className="space-y-2">
           <h2 id="project-gallery-heading" className="text-2xl font-semibold text-brand-ink sm:text-3xl">
-            Project Details
+            Work Area Visuals
           </h2>
           <p className="max-w-3xl text-sm leading-relaxed text-brand-charcoal/80 sm:text-base">
-            Add project details and photos here.
+            These visuals support the page layout without identifying specific projects, properties, clients,
+            locations, or outcomes.
           </p>
         </div>
         <ul className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
-          {placeholderProjects.map((project) => (
-            <li key={project.id} className="overflow-hidden rounded-3xl border border-brand-navy/10 bg-white shadow-soft">
+          {visualAssets.map((visual) => (
+            <li key={visual.id} className="overflow-hidden rounded-3xl border border-brand-navy/10 bg-white shadow-soft">
               <div className="relative aspect-[4/3]">
-                <Image src={project.image} alt={`Image needed for ${project.title}.`} fill className="object-cover" />
-              </div>
-              <div className="space-y-3 p-5">
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand-blue">{project.category}</p>
-                <h3 className="text-xl font-semibold text-brand-ink">{project.title}</h3>
-                <p className="text-sm leading-relaxed text-brand-charcoal/80">{project.details}</p>
-                <p className="rounded-xl bg-brand-blue/10 px-3 py-2 text-xs font-medium text-brand-navy">
-                  Project Details Needed
-                </p>
+                <Image src={visual.image} alt={visual.alt} fill className="object-cover" />
               </div>
             </li>
           ))}
@@ -154,10 +141,11 @@ export function ProjectsPageContent() {
         <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
           <div className="space-y-3">
             <h2 id="projects-cta-heading" className="text-2xl font-semibold text-brand-ink sm:text-3xl">
-              Contact Us
+              Discuss Your Property
             </h2>
             <p className="max-w-2xl text-sm leading-relaxed text-brand-charcoal/80 sm:text-base">
-              Reach out for your next project.
+              Contact Lanyard to talk through renovation, restoration, capital improvement, or maintenance needs for
+              your property.
             </p>
           </div>
           <Link href="/contact" className="btn-primary">

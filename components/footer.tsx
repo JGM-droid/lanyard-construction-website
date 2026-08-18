@@ -36,7 +36,7 @@ export function Footer() {
             Lanyard Construction Services provides multifamily renovation, restoration, and capital improvement support with a practical and dependable approach.
           </p>
           <div className="rounded-2xl border border-white/10 bg-white/10 p-4 text-sm leading-7 text-white/75">
-            <p className="font-semibold text-white">Official-site details reviewed</p>
+            <p className="font-semibold text-white">Contact Information</p>
             <p className="mt-2">Phone: (469) 543-1001</p>
             <p>Address: 208 Industrial Ct., Wylie, TX 75098</p>
           </div>

@@ -34,32 +34,36 @@ const services = [
     title: 'Exterior Renovations',
     description: 'Exterior renovation work for multifamily and other properties, including facades, roofing updates, and exterior improvements.',
     href: '/services/exterior-renovations',
+    linkLabel: 'Learn More',
     image: '/images/services/exterior-hero.svg',
   },
   {
     title: 'Interior Renovations',
     description: 'Interior renovation work for units, common areas, and shared spaces with a focus on coordination and quality.',
     href: '/services',
+    linkLabel: 'Explore Services',
     image: '/images/services/overview-hero.svg',
   },
   {
     title: 'Fire & Flood Restoration',
     description: 'Restoration support for urgent property needs, including fire and flood recovery work.',
     href: '/services',
-    image: '/images/projects/project-placeholder-1.svg',
+    linkLabel: 'Explore Services',
+    image: '/images/services/project-preview-a.svg',
   },
   {
     title: 'Maintenance Services',
     description: 'Reliable maintenance support for ongoing property needs and planned repairs.',
     href: '/services',
-    image: '/images/projects/project-placeholder-2.svg',
+    linkLabel: 'Explore Services',
+    image: '/images/services/project-preview-b.svg',
   },
 ];
 
 const projectGallery = [
-  { src: '/images/projects/project-placeholder-3.svg', alt: 'Completed project image' },
-  { src: '/images/projects/project-placeholder-4.svg', alt: 'Completed project image' },
-  { src: '/images/projects/project-placeholder-5.svg', alt: 'Completed project image' },
+  { src: '/images/home/hero-primary.svg', alt: 'Construction service visual' },
+  { src: '/images/home/service-highlight.svg', alt: 'Renovation service visual' },
+  { src: '/images/home/project-preview.svg', alt: 'Property improvement service visual' },
 ];
 
 function SectionHeading({
@@ -216,7 +220,7 @@ export function HomePage() {
               <div className="space-y-3 p-6">
                 <h3 className="text-xl font-semibold text-brand-ink">{service.title}</h3>
                 <p className="text-sm leading-7 text-brand-charcoal/80">{service.description}</p>
-                <span className="inline-flex items-center text-sm font-semibold text-brand-blue">Learn More</span>
+                <span className="inline-flex items-center text-sm font-semibold text-brand-blue">{service.linkLabel}</span>
               </div>
             </Link>
           ))}
@@ -229,7 +233,7 @@ export function HomePage() {
             <SectionHeading
               eyebrow="Completed Projects"
               title="Completed Projects"
-              description="Project photography and completed work examples are presented here as part of a polished client-ready experience."
+              description="Service visuals are presented here as part of a polished early review experience while final project details remain client-dependent."
             />
             <Link href="/projects" className="btn-secondary inline-flex">
               View Completed Projects

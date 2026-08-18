@@ -1,11 +1,5 @@
 import { PageContainer } from '@/components/page-container';
-import {
-  ConsultationCta,
-  ProcessOverview,
-  ServiceCategoryGrid,
-  ServicesHero,
-  TrustSignalSection,
-} from '@/components/services/service-sections';
+import { ConsultationCta, ServiceCategoryGrid, ServicesHero } from '@/components/services/service-sections';
 
 export default function ServicesPage() {
   return (
@@ -16,90 +10,37 @@ export default function ServicesPage() {
           title="Our Services"
           subtitle="Lanyard Construction Services provides exterior renovations, interior renovations, fire and flood restoration, and maintenance services."
           imageSrc="/images/services/overview-hero.svg"
-          imageAlt="Service image needed: Add an approved photograph showing exterior renovation work."
+          imageAlt="Construction service visual"
           ctaHref="/services/exterior-renovations"
-          ctaLabel="View Services"
+          ctaLabel="Explore Exterior Renovations"
         />
 
         <ServiceCategoryGrid
-          title="Services"
-          intro="These service categories are a simple list of the work we offer."
+          title="Service Categories"
+          intro="Lanyard supports multifamily properties with renovation, restoration, capital improvement, and maintenance services."
           items={[
             {
               title: 'Exterior Renovations',
-              description: 'Service photo needed. Add a photo showing this type of work.',
-              status: 'Placeholder',
+              description: 'Exterior renovation work for multifamily and other properties.',
             },
             {
               title: 'Interior Renovations',
-              description: 'Service photo needed. Add a photo showing this type of work.',
-              status: 'Placeholder',
+              description: 'Interior renovation work for units, common areas, and shared spaces.',
             },
             {
               title: 'Fire/Flood Restoration',
-              description: 'Service photo needed. Add a photo showing this type of work.',
-              status: 'Placeholder',
+              description: 'Restoration support for properties affected by fire or flood damage.',
             },
             {
               title: 'Maintenance Services',
-              description: 'Service photo needed. Add a photo showing this type of work.',
-              status: 'Placeholder',
-            },
-          ]}
-        />
-
-        <ProcessOverview
-          title="How We Work"
-          intro="We review each project and talk through the next step."
-          steps={[
-            {
-              title: 'Discuss the project',
-              description: 'We talk through the project and next step.',
-              status: 'Confirmed',
-            },
-            {
-              title: 'Review the work',
-              description: 'We review the property and scope.',
-              status: 'Placeholder',
-            },
-            {
-              title: 'Confirm the next step',
-              description: 'We help plan the next step.',
-              status: 'Placeholder',
-            },
-            {
-              title: 'Contact Us',
-              description: 'Call us or visit our office.',
-              status: 'Confirmed',
-            },
-          ]}
-        />
-
-        <TrustSignalSection
-          title="More to Add"
-          intro="Photos and project details will be added here."
-          bullets={[
-            {
-              label: 'Service photos',
-              description: 'Add a photo showing this type of work.',
-              status: 'Placeholder',
-            },
-            {
-              label: 'Project photos',
-              description: 'Add project photos and details.',
-              status: 'Placeholder',
-            },
-            {
-              label: 'Contact info',
-              description: 'Call us at (469) 543-1001.',
-              status: 'Placeholder',
+              description: 'Maintenance support for ongoing property needs and planned repairs.',
             },
           ]}
         />
 
         <ConsultationCta
-          title="Contact Us"
-          body="Reach out for your next project."
+          title="Discuss Your Property"
+          body="Contact Lanyard to talk through renovation, restoration, capital improvement, or maintenance needs for your property."
           primaryHref="/contact"
           primaryLabel="Contact Lanyard"
         />

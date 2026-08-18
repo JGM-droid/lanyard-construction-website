@@ -2,20 +2,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ReactNode } from 'react';
 
-type StatusKind = 'Confirmed' | 'Assumed' | 'Placeholder' | 'Open Question';
-
 type ServiceItem = {
   id?: string;
   title: string;
   description: string;
-  status: StatusKind;
 };
 
 type ProcessStep = {
   id?: string;
   title: string;
   description: string;
-  status: StatusKind;
 };
 
 type ProjectPreview = {
@@ -24,35 +20,7 @@ type ProjectPreview = {
   subtitle: string;
   imageSrc: string;
   imageAlt: string;
-  status: StatusKind;
 };
-
-function statusClass(status: StatusKind): string {
-  if (status === 'Confirmed') {
-    return 'border-brand-blue/30 bg-brand-blue/10 text-brand-navy';
-  }
-
-  if (status === 'Assumed') {
-    return 'border-brand-medium/25 bg-brand-medium/10 text-brand-navy';
-  }
-
-  if (status === 'Open Question') {
-    return 'border-brand-navy/20 bg-brand-navy/10 text-brand-navy';
-  }
-
-  return 'border-brand-charcoal/20 bg-brand-cream text-brand-charcoal';
-}
-
-function StatusPill({ status }: { status: StatusKind }) {
-  return (
-    <span
-      className={`inline-flex rounded-full border px-3 py-1 text-[0.7rem] font-semibold tracking-[0.18em] uppercase ${statusClass(status)}`}
-      aria-label={`Status label: ${status}`}
-    >
-      {status}
-    </span>
-  );
-}
 
 function SectionBlock({ tone, children, id }: { tone: 'light' | 'dark'; children: ReactNode; id?: string }) {
   return (
@@ -95,10 +63,6 @@ export function ServicesHero({
             {title}
           </h1>
           <p className="max-w-2xl text-pretty text-base leading-8 text-stone-200 sm:text-lg">{subtitle}</p>
-          <div className="flex flex-wrap gap-3">
-            <StatusPill status="Confirmed" />
-            <StatusPill status="Placeholder" />
-          </div>
           <div className="flex flex-wrap gap-4">
             <Link href={ctaHref} className="btn-primary">
               {ctaLabel}
@@ -118,9 +82,6 @@ export function ServicesHero({
             className="h-full w-full object-cover"
             priority
           />
-          <figcaption className="border-t border-stone-300/20 bg-brand-charcoal/90 px-4 py-3 text-xs leading-6 text-stone-300">
-            Image needed: add an approved photograph that shows the service area or completed work.
-          </figcaption>
         </figure>
       </div>
     </SectionBlock>
@@ -151,7 +112,6 @@ export function ServiceCategoryGrid({
               key={item.id ?? `${item.title}-${item.description}`}
               className="flex h-full flex-col gap-4 rounded-2xl border border-brand-navy/10 bg-brand-cream/60 p-6"
             >
-              <StatusPill status={item.status} />
               <h3 className="text-xl font-semibold text-brand-charcoal">{item.title}</h3>
               <p className="text-sm leading-7 text-stone-700">{item.description}</p>
             </article>
@@ -178,9 +138,6 @@ export function ProcessOverview({ title, intro, steps }: { title: string; intro:
               <p className="text-xs font-semibold tracking-[0.2em] text-brand-blue uppercase">Step {index + 1}</p>
               <h3 className="mt-3 text-lg font-semibold text-white">{step.title}</h3>
               <p className="mt-3 text-sm leading-7 text-stone-200">{step.description}</p>
-              <div className="mt-4">
-                <StatusPill status={step.status} />
-              </div>
             </li>
           ))}
         </ol>
@@ -196,7 +153,7 @@ export function TrustSignalSection({
 }: {
   title: string;
   intro: string;
-  bullets: { id?: string; label: string; description: string; status: StatusKind }[];
+  bullets: { id?: string; label: string; description: string }[];
 }) {
   return (
     <SectionBlock tone="light" id="trust-signals">
@@ -209,9 +166,6 @@ export function TrustSignalSection({
         <div className="space-y-4">
           {bullets.map((bullet) => (
             <article key={bullet.id ?? `${bullet.label}-${bullet.description}`} className="rounded-2xl border border-brand-navy/10 bg-brand-cream/70 p-5">
-              <div className="mb-3">
-                <StatusPill status={bullet.status} />
-              </div>
               <h3 className="text-lg font-semibold text-brand-charcoal">{bullet.label}</h3>
               <p className="mt-2 text-sm leading-7 text-stone-700">{bullet.description}</p>
             </article>
@@ -251,7 +205,6 @@ export function ProjectPreviewSection({
                 className="h-52 w-full object-cover sm:h-60"
               />
               <div className="space-y-3 p-6">
-                <StatusPill status={project.status} />
                 <h3 className="text-xl font-semibold text-brand-charcoal">{project.title}</h3>
                 <p className="text-sm leading-7 text-stone-700">{project.subtitle}</p>
               </div>

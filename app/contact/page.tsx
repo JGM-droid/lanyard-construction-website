@@ -12,13 +12,17 @@ export default function ContactPage() {
               Contact Lanyard
             </h1>
             <p className="max-w-2xl text-base leading-8 text-white/80 sm:text-lg">
-              Reach out for your next renovation project. Call us or visit our office.
+              Contact Lanyard to discuss renovation, restoration, capital improvement, or maintenance needs for your
+              property.
             </p>
             <div className="rounded-2xl border border-white/10 bg-white/10 p-4 text-sm leading-7 text-white/80">
-              <p className="font-semibold text-white">Official-site details reviewed</p>
+              <p className="font-semibold text-white">Contact Information</p>
               <p className="mt-2">Phone: (469) 543-1001</p>
               <p>Address: 208 Industrial Ct., Wylie, TX 75098</p>
-              <p className="mt-2">Exterior Renovations • Interior Renovations • Fire and Flood Restoration • Maintenance Services</p>
+              <p className="mt-2">
+                Exterior Renovations &bull; Interior Renovations &bull; Fire and Flood Restoration &bull; Maintenance
+                Services
+              </p>
             </div>
             <div className="flex flex-wrap gap-3">
               <Link href="/services" className="btn-primary">
@@ -33,9 +37,9 @@ export default function ContactPage() {
           <div className="rounded-[2rem] border border-white/15 bg-white/10 p-6 shadow-soft backdrop-blur">
             <h2 className="text-xl font-semibold text-white">Contact Details</h2>
             <ul className="mt-5 space-y-3 text-sm leading-7 text-white/80">
-              <li>• Phone: (469) 543-1001</li>
-              <li>• Address: 208 Industrial Ct., Wylie, TX 75098</li>
-              <li>• Services: Exterior Renovations, Interior Renovations, Fire and Flood Restoration, Maintenance Services</li>
+              <li>Phone: (469) 543-1001</li>
+              <li>Address: 208 Industrial Ct., Wylie, TX 75098</li>
+              <li>Services: Exterior Renovations, Interior Renovations, Fire and Flood Restoration, Maintenance Services</li>
             </ul>
           </div>
         </div>
