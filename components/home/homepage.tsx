@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import type { ReactNode } from 'react';
+import { assetPath } from '@/lib/asset-path';
 
 const whyChooseItems = [
   {
@@ -35,35 +36,35 @@ const services = [
     description: 'Exterior renovation work for multifamily and other properties, including facades, roofing updates, and exterior improvements.',
     href: '/services/exterior-renovations',
     linkLabel: 'Learn More',
-    image: '/images/services/exterior-hero.svg',
+    image: assetPath('/images/services/exterior-hero.svg'),
   },
   {
     title: 'Interior Renovations',
     description: 'Interior renovation work for units, common areas, and shared spaces with a focus on coordination and quality.',
     href: '/services',
     linkLabel: 'Explore Services',
-    image: '/images/services/overview-hero.svg',
+    image: assetPath('/images/services/overview-hero.svg'),
   },
   {
     title: 'Fire & Flood Restoration',
     description: 'Restoration support for urgent property needs, including fire and flood recovery work.',
     href: '/services',
     linkLabel: 'Explore Services',
-    image: '/images/services/project-preview-a.svg',
+    image: assetPath('/images/services/project-preview-a.svg'),
   },
   {
     title: 'Maintenance Services',
     description: 'Reliable maintenance support for ongoing property needs and planned repairs.',
     href: '/services',
     linkLabel: 'Explore Services',
-    image: '/images/services/project-preview-b.svg',
+    image: assetPath('/images/services/project-preview-b.svg'),
   },
 ];
 
 const projectGallery = [
-  { src: '/images/home/hero-primary.svg', alt: 'Construction service visual' },
-  { src: '/images/home/service-highlight.svg', alt: 'Renovation service visual' },
-  { src: '/images/home/project-preview.svg', alt: 'Property improvement service visual' },
+  { src: assetPath('/images/home/hero-primary.svg'), alt: 'Construction service visual' },
+  { src: assetPath('/images/home/service-highlight.svg'), alt: 'Renovation service visual' },
+  { src: assetPath('/images/home/project-preview.svg'), alt: 'Property improvement service visual' },
 ];
 
 function SectionHeading({
@@ -110,7 +111,7 @@ export function HomePage() {
       <section className="relative isolate overflow-hidden bg-brand-navy">
         <div className="absolute inset-0">
           <Image
-            src="/images/services/exterior-hero.svg"
+            src={assetPath('/images/services/exterior-hero.svg')}
             alt="Exterior renovation work for a multifamily or commercial property"
             fill
             priority
@@ -163,7 +164,7 @@ export function HomePage() {
           <div className="overflow-hidden rounded-[2rem] border border-brand-navy/10 bg-brand-cream/70 shadow-soft">
             <div className="relative aspect-[16/10] w-full">
               <Image
-                src="/images/home/hero-primary.svg"
+                src={assetPath('/images/home/hero-primary.svg')}
                 alt="Construction project work and exterior renovation details"
                 fill
                 className="object-cover"

@@ -1,5 +1,6 @@
 import { PageContainer } from '@/components/page-container';
 import { ConsultationCta, ServiceCategoryGrid, ServicesHero } from '@/components/services/service-sections';
+import { assetPath } from '@/lib/asset-path';
 
 export default function ExteriorRenovationsPage() {
   return (
@@ -9,7 +10,7 @@ export default function ExteriorRenovationsPage() {
           headingId="exterior-renovations-title"
           title="Exterior Renovations"
           subtitle="Lanyard Construction Services provides exterior renovation work for multifamily and other properties."
-          imageSrc="/images/services/exterior-hero.svg"
+          imageSrc={assetPath('/images/services/exterior-hero.svg')}
           imageAlt="Exterior renovation service visual"
           ctaHref="/contact"
           ctaLabel="Contact Lanyard"

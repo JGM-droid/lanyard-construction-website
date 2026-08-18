@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { assetPath } from '@/lib/asset-path';
 
 const differentiators = [
   {
@@ -69,7 +70,7 @@ export function AboutPageContent() {
             <div className="relative z-10 mx-auto flex max-w-sm flex-col items-center gap-5 text-center">
               <div className="rounded-2xl border border-white/20 bg-white/8 p-4 backdrop-blur-sm">
                 <Image
-                  src="/images/brand/lanyard-logo.png"
+                  src={assetPath('/images/brand/lanyard-logo.png')}
                   alt="Lanyard Construction Services logo"
                   width={280}
                   height={140}

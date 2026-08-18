@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
+import { assetPath } from '@/lib/asset-path';
 
 const navItems = [
   { href: '/', label: 'Home' },
@@ -22,7 +23,7 @@ export function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 sm:px-8 lg:px-10">
         <Link href="/" className="flex items-center gap-3" aria-label="Lanyard Construction Services home">
           <div className="flex h-12 w-12 items-center justify-center rounded-full border border-brand-blue/20 bg-brand-cream/80 p-2 shadow-sm">
-            <Image src="/images/brand/lanyard-logo.png" alt="" width={72} height={72} className="h-full w-full object-contain" />
+            <Image src={assetPath('/images/brand/lanyard-logo.png')} alt="" width={72} height={72} className="h-full w-full object-contain" />
           </div>
           <div className="leading-none">
             <p className="text-sm font-semibold uppercase tracking-[0.26em] text-brand-navy">Lanyard</p>

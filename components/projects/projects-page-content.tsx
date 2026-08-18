@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { assetPath } from '@/lib/asset-path';
 
 const projectCategories = [
   {
@@ -27,32 +28,32 @@ const projectCategories = [
 const visualAssets = [
   {
     id: 'project-visual-1',
-    image: '/images/services/exterior-hero.svg',
+    image: assetPath('/images/services/exterior-hero.svg'),
     alt: 'Construction service visual',
   },
   {
     id: 'project-visual-2',
-    image: '/images/services/overview-hero.svg',
+    image: assetPath('/images/services/overview-hero.svg'),
     alt: 'Multifamily construction service visual',
   },
   {
     id: 'project-visual-3',
-    image: '/images/services/project-preview-a.svg',
+    image: assetPath('/images/services/project-preview-a.svg'),
     alt: 'Renovation service visual',
   },
   {
     id: 'project-visual-4',
-    image: '/images/services/project-preview-b.svg',
+    image: assetPath('/images/services/project-preview-b.svg'),
     alt: 'Restoration service visual',
   },
   {
     id: 'project-visual-5',
-    image: '/images/home/service-highlight.svg',
+    image: assetPath('/images/home/service-highlight.svg'),
     alt: 'Capital improvement service visual',
   },
   {
     id: 'project-visual-6',
-    image: '/images/home/hero-secondary.svg',
+    image: assetPath('/images/home/hero-secondary.svg'),
     alt: 'Maintenance service visual',
   },
 ];
@@ -63,7 +64,7 @@ export function ProjectsPageContent() {
       <section className="section-surface overflow-hidden bg-brand-navy text-white">
         <div className="grid lg:grid-cols-[1.2fr_0.8fr]">
           <div className="relative min-h-[20rem] lg:min-h-[26rem]">
-            <Image src="/images/services/exterior-hero.svg" alt="Construction service visual" fill className="object-cover" priority />
+            <Image src={assetPath('/images/services/exterior-hero.svg')} alt="Construction service visual" fill className="object-cover" priority />
             <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/90 via-brand-navy/55 to-transparent" />
             <div className="relative z-10 flex h-full flex-col justify-end gap-4 p-6 sm:p-10">
               <p className="inline-flex w-fit rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-white/90">

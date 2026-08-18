@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { assetPath } from '@/lib/asset-path';
 
 const footerLinks = [
   { href: '/', label: 'Home' },
@@ -23,7 +24,7 @@ export function Footer() {
         <div className="max-w-xl space-y-4">
           <Link href="/" className="flex items-center gap-3" aria-label="Lanyard Construction Services home">
             <div className="flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-white/10 p-2">
-              <Image src="/images/brand/lanyard-logo.png" alt="" width={72} height={72} className="h-full w-full object-contain" />
+              <Image src={assetPath('/images/brand/lanyard-logo.png')} alt="" width={72} height={72} className="h-full w-full object-contain" />
             </div>
             <div className="leading-none">
               <p className="text-sm font-semibold uppercase tracking-[0.26em]">Lanyard</p>
